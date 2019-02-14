@@ -10,11 +10,18 @@
 #include "server.h"
 
 struct server_state *init_server();
+void main_loop(struct server_state *state);
 
 int main()
 {
 	struct server_state *state = init_server();
+	main_loop(state);
 	return 0;
+}
+
+void main_loop()
+{
+	
 }
 
 struct server_state *init_server()
