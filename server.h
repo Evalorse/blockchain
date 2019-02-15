@@ -15,8 +15,12 @@ struct user
 
 struct server_state
 {
-	
-}
+	int server_socket;
+	int online_users;
+
+	struct user *user;
+	struct sockaddr_in address;
+};
 
 struct server_state *init_server();
 void main_loop(struct server_state *state);
